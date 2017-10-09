@@ -1,0 +1,10 @@
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <a routerLink="../artist/{{currentArtist.Id}}">
+        <div class="text-center text-overflow-ellipsis list-item">
+            <img *ngIf="currentArtist.Images[1]==undefined" src="../assets/img/noun_641050_cc.png" alt="{{currentArtist.Name}}" class="img-thumbnail list-item-image"/>
+            <img *ngIf="currentArtist.Images[1]!=undefined" src="{{ currentArtist.Images[1].Url}}" alt="{{currentArtist.Name}}" class="img-thumbnail list-item-image"/>
+            <br />
+            <span class="artist-title">{{currentArtist.Name}}</span> <span class="badge badge-secondary">({{currentArtist.Popularity}}%)</span>
+        </div>
+    </a>
+</div>

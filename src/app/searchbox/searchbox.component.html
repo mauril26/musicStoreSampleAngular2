@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <a data-toggle="collapse" href="#collapseArtists" aria-expanded="true" aria-controls="collapseArtists">
+        Artists
+      </a>
+  </div>
+  <div id="collapseArtists" class="panel-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let item of Artists.Items">
+          <app-artist-list-item [artist]="item"></app-artist-list-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <a data-toggle="collapse" href="#collapseAlbums" aria-expanded="true" aria-controls="collapseAlbums">
+        Albums
+      </a>
+  </div>
+  <div id="collapseAlbums" class="panel-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let item of Albums.Items">
+          <app-album-list-item [album]="item"></app-album-list-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <a data-toggle="collapse" href="#collapseTracks" aria-expanded="true" aria-controls="collapseTracks">
+        Tracks
+      </a>
+  </div>
+  <div id="collapseTracks" class="panel-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let item of Tracks.Items">
+          <!-- <app-artist-list-item [artist]="item"></app-artist-list-item> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

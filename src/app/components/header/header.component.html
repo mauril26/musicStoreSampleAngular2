@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+  <a class="navbar-brand" href="#">Spotify Sample</a>
+
+  <form class="navbar-form form-inline navbar-right" name="searchForm" action="" (ngSubmit)="onSearchSubmit(searchForm)" #searchForm="ngForm">
+    
+    <div class="form-group">
+      <input class="" type="checkbox" checked name="artist" id="artist" value="artist" ngModel>
+      <label class="form-check-label">Artist |&nbsp;</label>
+    </div>
+
+    <div class="form-group">
+      <input class="" type="checkbox" name="album" id="album" value="album" ngModel>
+      <label class="form-check-label">Album |&nbsp;</label>
+    </div>
+
+    <div class="form-group">
+      <input class="" type="checkbox" name="track" id="track" value="track" ngModel>
+      <label class="form-check-label">Track&nbsp;</label>
+    </div>
+
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+      minlength="3"
+      name="query"
+      id="query"
+      required
+      ngModel
+      value="{{searchTerm}}">
+
+    <button
+      class="btn btn-default"
+      type="submit"
+      name="submitSearch"
+      id="submitSearch"
+      [disabled]="searchForm.invalid">
+        Search
+    </button>
+  </form>
+
+</nav>
